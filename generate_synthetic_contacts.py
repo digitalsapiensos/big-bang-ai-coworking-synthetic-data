@@ -232,6 +232,9 @@ def fmt_iso_with_offset(dt: datetime) -> str:
 def generate_tags(base_existing: list[str], source: str, sector: str, activity: str, service: str) -> str:
     tags = list(base_existing)
     tags.extend([source, sector, activity, service])
+    # Etiqueta fija para facilitar el borrado posterior en CRM
+    if "Dami" not in tags:
+        tags.append("Dami")
     return ", ".join(tags)
 
 
