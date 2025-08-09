@@ -10,7 +10,7 @@ Actividad para el programa Big Bang AI. El dataset simula leads y clientes poten
 
 ## Esquema
 Columnas:
-- Contact Id, First Name, Last Name, Business Name, Company Name, Phone, Email, Created, Last Activity, Tags, Razón de Contacto, Propuesta de Valor, Additional Emails, Additional Phones.
+- First Name, Last Name, Business Name, Company Name, Phone, Email, Created, Last Activity, Tags, Razón de Contacto, Propuesta de Valor, Additional Emails, Additional Phones.
 
 Notas:
 - Fechas en ISO 8601 con offset +02:00.

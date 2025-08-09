@@ -249,7 +249,7 @@ def pick_existing_style_tags() -> list[str]:
 def main(output_path: str, n: int = 100, seed: int = 42) -> None:
     random.seed(seed)
     headers = [
-        "Contact Id", "First Name", "Last Name", "Business Name", "Company Name", "Phone", "Email",
+        "First Name", "Last Name", "Business Name", "Company Name", "Phone", "Email",
         "Created", "Last Activity", "Tags", "Razón de Contacto", "Propuesta de Valor", "Additional Emails", "Additional Phones"
     ]
 
@@ -258,7 +258,6 @@ def main(output_path: str, n: int = 100, seed: int = 42) -> None:
         writer.writerow(headers)
 
         for _ in range(n):
-            contact_id = generate_contact_id(random.choice([20, 21, 22]))
             first, last = generate_names()
             sector, activity = pick_sector_activity()
             company_name = generate_company(sector)
@@ -284,7 +283,6 @@ def main(output_path: str, n: int = 100, seed: int = 42) -> None:
             add_phones = additional_phones()
 
             row = [
-                contact_id,
                 first,
                 last,
                 business_name,
